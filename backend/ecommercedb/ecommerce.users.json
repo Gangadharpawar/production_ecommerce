@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "67b617b71cc1f0f7cda27e82"
+  },
+  "name": "Gangadhar",
+  "email": "gangadharp93@gmail.com",
+  "phone": "8805935014",
+  "address": "Pune",
+  "password": "$2b$10$dr79I675rcRov4JY4I.tBe7oGmI/TIhzOPG3R0LH9bSy45oG94hnW",
+  "answer": "green",
+  "role": 0,
+  "createdAt": {
+    "$date": "2025-02-19T17:41:11.235Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T19:23:22.015Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b61e77a0983ee7e13759bb"
+  },
+  "name": "Admin",
+  "email": "admin@gmail.com",
+  "phone": "1234567890",
+  "address": "Pune",
+  "password": "$2b$10$hUFkueM4TcJNG.3M3bHav.cQvGl3Ie826o8FJVYxZpCL2va/JF2gq",
+  "answer": "green",
+  "role": 1,
+  "createdAt": {
+    "$date": "2025-02-19T18:09:59.627Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T18:09:59.627Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68130363a5e392caf0d29841"
+  },
+  "name": "pushpanjali",
+  "email": "pushpanjali@gmail.com",
+  "phone": "8999984850",
+  "address": "At post koral Tq Omerga Dist:Darashiv pin 413604",
+  "password": "$2b$10$UcguALxsQoqerDchQMjTgecE5y6KUHhjyI8lAvcPhfABd79V0.jKC",
+  "answer": "green",
+  "role": 0,
+  "createdAt": {
+    "$date": "2025-05-01T05:15:15.167Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T05:15:15.167Z"
+  },
+  "__v": 0
+}]

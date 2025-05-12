@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "67cd1e46e7dd1e3ecf34f247"
+  },
+  "name": "Men’s Collection",
+  "slug": "men's-collection",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cddd1b0ac1a54b8611ab1c"
+  },
+  "name": "Kids Collection",
+  "slug": "kids-collection",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68013e5b0bd81e66c6c446d1"
+  },
+  "name": "Gold Collection",
+  "slug": "gold-collection",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680a736693b6e904e1e50beb"
+  },
+  "name": "Home Collection",
+  "slug": "home-collection",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680a74fe93b6e904e1e50c16"
+  },
+  "name": "Women’s Collection",
+  "slug": "women's-collection",
+  "__v": 0
+}]
