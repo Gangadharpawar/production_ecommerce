@@ -54,4 +54,23 @@
     "$date": "2025-05-01T05:15:15.167Z"
   },
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6818bab67850173d7554d209"
+  },
+  "name": "yogesh",
+  "email": "yogesh@gmail.com",
+  "phone": "1234567897",
+  "address": "pune",
+  "password": "$2b$10$J.ovGW2ZHfG7Z7NnXaz9C.3E6uGdcPZq6iqYG6jCPxhcYm0MHh5F.",
+  "answer": "green",
+  "role": 0,
+  "createdAt": {
+    "$date": "2025-05-05T13:18:46.240Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-05T13:18:46.240Z"
+  },
+  "__v": 0
 }]
