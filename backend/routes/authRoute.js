@@ -13,6 +13,7 @@ import {
   orderDelete,
 } from "../controllers/authController.js";
 import { isAdmin, requiresSignIn } from "../middlewares/authMiddleware.js";
+import { enquireMail } from "../controllers/email.js";
 //router Object
 const router = express.Router();
 
@@ -56,5 +57,7 @@ router.put('/order-status/:orderId', requiresSignIn, isAdmin, orderStatusControl
 //order cancel from user side 
 router.put('/order-Cancel/:orderId', orderCancel);
 //cancel order delete from user side 
-router.delete('/order-delete/:orderId', orderDelete)
+router.delete('/order-delete/:orderId', orderDelete);
+//Enquire mail 
+router.post('/enquire-mail', enquireMail);
 export default router;

@@ -1,7 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from './../components/Layout/Layout';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 const ContactPage = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const payload = {
+        name,
+        email,
+        message,
+      };
+      const { data } = await axios.post(`/api/v1/auth/enquire-mail`, payload, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      if (data?.success) {
+        toast.success("Message sent successfully!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        toast.error("Fail to send mail !");
+
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Failed to Send message .Please try again");
+    }
+  }
   return (
     <Layout title={"Contact us"}>
       <div className="container mt-5">
@@ -27,18 +60,22 @@ const ContactPage = () => {
           </div>
           <div className="col-lg-6 col-md-12">
             <div className="p-4 bg-white shadow-sm rounded">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">Name</label>
-                  <input type="text" className="form-control" id="name" placeholder="Your Name" />
+                  <input type="text" className="form-control" id="name" placeholder="Your Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">Email</label>
-                  <input type="email" className="form-control" id="email" placeholder="Your Email" />
+                  <input type="email" className="form-control" id="email" placeholder="Your Email"
+                    value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="message" className="form-label">Message</label>
-                  <textarea className="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                  <textarea className="form-control" id="message" rows="5" placeholder="Your Message"
+                    value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary w-100">Send Message</button>
               </form>
